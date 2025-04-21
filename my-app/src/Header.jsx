@@ -6,8 +6,8 @@ function Header({ toggleCart, isCartVisible }) {
   const { cart } = useCart();
 
   return (
-    <header className="bg-blue-500 text-white p-4 flex justify-between items-center">
-      <h1 className="text-2xl font-bold">My E-Commerce Store</h1>
+    <header className="bg-blue-500 text-white p-8 flex justify-between items-center">
+      <h1 className="text-2xl font-bold">Storelando</h1>
 
       <nav className="flex items-center space-x-6">
         <Link to="/" className="hover:underline">

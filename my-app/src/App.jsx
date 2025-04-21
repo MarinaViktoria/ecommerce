@@ -8,6 +8,7 @@ import { CartProvider } from "./CartContext";
 import ProductsLayout from "./ProductsLayout";
 import ProductDetail from "./ProductDetails";
 import ErrorBoundary from "./ErrorBoundary";
+import Footer from "./Footer";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -88,6 +89,7 @@ function App() {
               <Route path=":id" element={<ProductDetail />} />
             </Route>
           </Routes>
+          <Footer />
         </Router>
       </CartProvider>
     </ErrorBoundary>
