@@ -16,9 +16,9 @@ export default function Cart() {
           </p>
         ) : (
           <ul className="space-y-2">
-            {cart.map((item, index) => (
+            {cart.map((item) => (
               <li
-                key={index}
+                key={item.cartItemId}
                 className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b pb-2"
               >
                 <h3 className="w-full sm:w-48 mb-2 sm:mb-0">{item.title}</h3>
