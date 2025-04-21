@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 import { useCart } from "./useCart";
 //import { useParams } from "react-router-dom";
 
-function MainPart({ products, loading }) {
+function MainPart({ products, loading, isCartVisible }) {
   const { addToCart } = useCart();
   const [searchInput, setSearchInput] = useState("");
   //const { id } = useParams();
@@ -33,7 +33,11 @@ function MainPart({ products, loading }) {
     : products.slice(0, 6);
 
   return (
-    <main className="p-6 bg-gray-100">
+    <main
+      className={`p-6 bg-gray-100 transition-all duration-300 ease-in-out ${
+        isCartVisible ? "lg:mr-[30rem]" : ""
+      }`}
+    >
       {/*min-h-screen*/}
       {/* Welcome Section */}
       <section className="text-center mb-8">

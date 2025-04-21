@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 import Products from "./Products";
 import Cart from "./Cart";
 import { CartProvider } from "./CartContext";
-
+import ProductsLayout from "./ProductsLayout";
+import ProductDetail from "./ProductDetails";
 import ErrorBoundary from "./ErrorBoundary";
 
 function App() {
@@ -40,20 +41,52 @@ function App() {
           <Header toggleCart={toggleCart} isCartVisible={isCartVisible} />
 
           {isCartVisible && (
-            <div className="p-6 bg-white shadow-lg max-w-xl mx-auto mt-4 rounded">
+            <div className="fixed top-0 right-0 h-full w-full sm:w-[35%] bg-white shadow-lg z-50 p-6 overflow-y-auto transition-all duration-300 ease-in-out">
               <Cart />
+              <div className="flex justify-center w-full">
+                <button
+                  onClick={toggleCart}
+                  className="mt-8 bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-700 transition-all duration-300 ease-in-out"
+                >
+                  Close Cart
+                </button>
+              </div>
             </div>
           )}
 
           <Routes>
             <Route
               path="/"
-              element={<MainPart products={products} loading={loading} />}
+              element={
+                <MainPart
+                  products={products}
+                  loading={loading}
+                  isCartVisible={isCartVisible}
+                />
+              }
             />
             <Route
               path="/products"
-              element={<Products products={products} loading={loading} />}
-            />
+              element={
+                <ProductsLayout
+                  products={products}
+                  loading={loading}
+                  isCartVisible={isCartVisible}
+                />
+              }
+            >
+              <Route
+                index
+                element={
+                  <Products
+                    products={products}
+                    loading={loading}
+                    isCartVisible={isCartVisible}
+                  />
+                }
+              />
+              <Route path=":id" element={<ProductDetail />} />
+            </Route>
           </Routes>
         </Router>
       </CartProvider>

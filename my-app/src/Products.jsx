@@ -1,7 +1,12 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 
-export default function Products({ products, loading, addToCart }) {
+export default function Products({
+  products,
+  loading,
+  addToCart,
+  isCartVisible,
+}) {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const categories = [
@@ -19,7 +24,11 @@ export default function Products({ products, loading, addToCart }) {
 
   return (
     <div>
-      <main className="p-6 bg-gray-100 min-h-screen">
+      <main
+        className={`p-6 bg-gray-100 transition-all duration-300 ease-in-out ${
+          isCartVisible ? "lg:mr-[30rem]" : ""
+        }`}
+      >
         {/* Welcome Section */}
         <section className="text-center mb-8">
           <h2 className="text-2xl font-semibold text-blue-700">

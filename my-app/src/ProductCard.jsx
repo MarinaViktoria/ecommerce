@@ -1,14 +1,8 @@
-import { useState } from "react";
 import { useCart } from "./useCart";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({ product }) {
   const { addToCart } = useCart();
-
-  const [showInfo, setShowInfo] = useState(false);
-
-  const toggleInfo = () => {
-    setShowInfo((prev) => !prev);
-  };
 
   return (
     <div className="p-4 bg-white shadow-md rounded-lg flex flex-col items-center">
@@ -18,18 +12,15 @@ export default function ProductCard({ product }) {
         alt={product.title}
       />
       {/*console.log("Image URL:", product.image);*/}
-      <h3 className="h-20 text-lg font-bold text-gray-800">{product.title}</h3>
-      {showInfo && (
-        <p className="text-sm text-gray-700 mt-2 mb-2 text-center">
-          {product.description}
-        </p>
-      )}
-      <button
-        onClick={toggleInfo}
-        className="mb-2 text-blue-500 underline py-1 px-3 rounded hover:text-blue-700 hover:font-bold transition-all duration-300 ease-in-out"
-      >
-        {showInfo ? "Show less info" : "Show more info"}
-      </button>
+      <h3 className="h-20 text-lg font-bold text-gray-800">
+        <Link
+          to={`/products/${product.id}`}
+          className="hover:underline text-blue-700"
+        >
+          {product.title}
+        </Link>
+      </h3>
+
       <p className="text-gray-600 mb-8">{product.price.toFixed(2)} €</p>
       <button
         onClick={() => addToCart(product)}

@@ -4,10 +4,6 @@ export default function Cart() {
   const { cart, removeFromCart } = useCart();
   const cartSum = cart.reduce((sum, item) => sum + item.price, 0);
 
-  if (cart.length === 0) {
-    return <p>Your cart is empty</p>;
-  }
-
   return (
     <div>
       {/* Show cart */}
@@ -15,16 +11,18 @@ export default function Cart() {
       <div className="mt-2 p-4 bg-blue-100">
         <h2 className="text-xl text-center font-semibold mb-8">🛒 Cart</h2>
         {cart.length === 0 ? (
-          <p>Your cart is empty</p>
+          <p className="text-l text-center font-semibold mb-20">
+            Your cart is empty
+          </p>
         ) : (
           <ul className="space-y-2">
             {cart.map((item, index) => (
               <li
                 key={index}
-                className="flex justify-between items-center border-b pb-2"
+                className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-b pb-2"
               >
-                <h3 className="w-80">{item.title}</h3>
-                <div className="flex items-center space-x-4">
+                <h3 className="w-full sm:w-48 mb-2 sm:mb-0">{item.title}</h3>
+                <div className="flex justify-between sm:justify-end items-center space-x-4">
                   <h4>{item.price.toFixed(2)} €</h4>
                   <button
                     onClick={() => removeFromCart(item)}
@@ -38,10 +36,12 @@ export default function Cart() {
           </ul>
         )}
       </div>
-      <div className="mt-8 flex justify-between">
-        <h3>Total price:</h3>
-        <h3>{cartSum.toFixed(2)} €</h3>
-      </div>
+      {cart.length > 0 && (
+        <div className="mt-8 flex justify-between">
+          <h3>Total price:</h3>
+          <h3>{cartSum.toFixed(2)} €</h3>
+        </div>
+      )}
     </div>
   );
 }
