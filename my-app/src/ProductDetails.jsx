@@ -28,7 +28,7 @@ export default function ProductDetail() {
         onClick={() => navigate(-1)}
         className="mt-6 bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-700 transition"
       >
-        ← Zurück
+        ← Back
       </button>
 
       <img src={product.image} alt={product.title} className="w-72 mx-auto" />
