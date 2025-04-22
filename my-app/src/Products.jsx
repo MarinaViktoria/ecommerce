@@ -1,12 +1,7 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 
-export default function Products({
-  products,
-  loading,
-  addToCart,
-  isCartVisible,
-}) {
+export default function Products({ products, loading, isCartVisible }) {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const categories = [
@@ -58,11 +53,7 @@ export default function Products({
             <p className="text-center col-span-full">Loading products...</p>
           ) : (
             filteredProducts.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                addToCart={addToCart}
-              />
+              <ProductCard key={product.id} product={product} />
             ))
           )}
         </section>
