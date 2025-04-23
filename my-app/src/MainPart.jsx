@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
-import { useCart } from "./useCart";
+import { useCart } from "./context/useCart";
 //import { useParams } from "react-router-dom";
 
 function MainPart({ products, loading, isCartVisible }) {

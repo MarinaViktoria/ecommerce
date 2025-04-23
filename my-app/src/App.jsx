@@ -4,7 +4,7 @@ import MainPart from "./MainPart";
 import { useState, useEffect } from "react";
 import Products from "./Products";
 import Cart from "./Cart";
-import { CartProvider } from "./CartContext";
+import { CartProvider } from "./context/CartContext";
 import ProductsLayout from "./ProductsLayout";
 import ProductDetail from "./ProductDetails";
 import ErrorBoundary from "./ErrorBoundary";

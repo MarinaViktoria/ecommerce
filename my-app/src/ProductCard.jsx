@@ -1,4 +1,4 @@
-import { useCart } from "./useCart";
+import { useCart } from "./context/useCart";
 import { Link } from "react-router-dom";
 
 export default function ProductCard({ product }) {
