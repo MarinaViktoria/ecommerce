@@ -27,7 +27,7 @@ function Header({ toggleCart, isCartVisible }) {
         </button>
         {cart.length > 0 && (
           <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-xs px-2">
-            {cart.length}
+            {cart.reduce((sum, item) => sum + item.quantity, 0)}
           </span>
         )}
       </div>
