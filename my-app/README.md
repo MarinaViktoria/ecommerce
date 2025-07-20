@@ -10,9 +10,6 @@ React, Vite, Tailwind
 
 ### Main learnings
 
-Fetching real data from an API → Using the Fake Store API
-Dynamic State Updates → Managing data and rendering updates
-
 Setting Up Routing with React Router
 (Installing react-router-dom)
 
@@ -36,5 +33,5 @@ Using an Error Boundary
 
 ### images
 
-<img src="./assets/products.jpeg" alt="Celebration" style="width: 50%; height: auto;" />
-<img src="./assets/cart.jpeg" alt="Celebration" style="width: 50%; height: auto;" />
+<img src="./assets/products.png" alt="products" style="width: 50%; height: auto;" />
+<img src="./assets/cart.png" alt="cart" style="width: 50%; height: auto;" />
