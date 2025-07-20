@@ -6,12 +6,15 @@ function Header({ toggleCart, isCartVisible }) {
   const { cart } = useCart();
 
   return (
-    <header className="bg-blue-500 text-white p-8 flex justify-between items-center">
+    <header className="bg-sky-300 text-white p-8 flex justify-between items-center">
       <h1 className="text-2xl font-bold">Storelando</h1>
 
       <nav className="flex items-center space-x-6">
         <Link to="/" className="hover:underline">
           Home
+        </Link>
+        <Link to="topsellers" className="hover:underline">
+          Top sellers
         </Link>
         <Link to="products" className="hover:underline">
           Products
@@ -21,7 +24,7 @@ function Header({ toggleCart, isCartVisible }) {
       <div className="relative">
         <button
           onClick={toggleCart}
-          className="bg-blue-600 py-1 px-3 rounded hover:bg-blue-700 transition-all duration-300 ease-in-out"
+          className="bg-sky-500 py-1 px-3 rounded hover:bg-sky-600 transition-all duration-300 ease-in-out"
         >
           {isCartVisible ? "Close Cart" : "View Cart"}
         </button>

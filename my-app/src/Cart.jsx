@@ -12,7 +12,7 @@ export default function Cart() {
     <div>
       {/* Show cart */}
 
-      <div className="mt-2 p-4 bg-blue-100">
+      <div className="mt-2 p-4 bg-sky-100">
         <h2 className="text-xl text-center font-semibold mb-8">🛒 Cart</h2>
         {cart.length === 0 ? (
           <p className="text-l text-center font-semibold mb-20">

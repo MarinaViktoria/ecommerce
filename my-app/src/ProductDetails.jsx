@@ -26,7 +26,7 @@ export default function ProductDetail() {
     <div className="p-6 max-w-2xl mx-auto bg-white shadow rounded mt-6">
       <button
         onClick={() => navigate(-1)}
-        className="mt-6 bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-700 transition"
+        className="mt-6 bg-sky-500 text-white py-1 px-2 rounded hover:bg-sky-600 transition"
       >
         ← Back
       </button>
@@ -46,13 +46,13 @@ export default function ProductDetail() {
       >
         <button
           onClick={toggleInfo}
-          className="mb-2 text-blue-500 underline py-1 px-3 rounded hover:text-blue-700 hover:font-bold transition-all duration-300 ease-in-out"
+          className="mb-2 text-sky-500 underline py-1 px-3 rounded hover:text-sky-600 hover:font-bold transition-all duration-300 ease-in-out"
         >
           {showInfo ? "Show less info" : "Show more info"}
         </button>
       </div>
 
-      <p className="mt-4 mb-4 text-center text-lg font-semibold text-blue-600">
+      <p className="mt-4 mb-4 text-center text-lg font-semibold text-sky-600">
         {product.price.toFixed(2)} €
       </p>
 
@@ -63,7 +63,7 @@ export default function ProductDetail() {
       >
         <button
           onClick={() => addToCart(product)}
-          className="mt-auto bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition-all duration-300 ease-in-out"
+          className="mt-auto bg-sky-500 text-white py-2 px-4 rounded hover:bg-sky-600 transition-all duration-300 ease-in-out"
         >
           Add to Cart
         </button>

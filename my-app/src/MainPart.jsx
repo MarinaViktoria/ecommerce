@@ -41,9 +41,13 @@ function MainPart({ products, loading, isCartVisible }) {
       {/*min-h-screen*/}
       {/* Welcome Section */}
       <section className="text-center mb-8">
-        <h2 className="text-2xl font-semibold text-blue-700">
+        <h2 className="text-2xl font-semibold text-sky-600">
           Welcome to Our Store!
         </h2>
+
+        <p className="mt-4 text-gray-600">
+          Discover our amazing products and enjoy exclusive deals.
+        </p>
 
         <input
           onChange={handleSearch}
@@ -51,10 +55,6 @@ function MainPart({ products, loading, isCartVisible }) {
           placeholder="Search products"
           className="mt-4 p-2 border border-gray-300 rounded"
         />
-
-        <p className="mt-4 text-gray-600">
-          Discover our amazing products and enjoy exclusive deals.
-        </p>
       </section>
 
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
