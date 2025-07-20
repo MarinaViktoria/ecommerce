@@ -16,6 +16,8 @@ Setting Up Routing with React Router
 Fetching Product Data from an API
 (Using Fake Store API to load product data dynamically)
 
+Searching for a product and Filtering
+
 Creating a Dynamic Product Page
 (Using React Router Params to load product details dynamically)
 
@@ -35,3 +37,4 @@ Using an Error Boundary
 
 <img src="./src/assets/products.png" alt="products" style="width: 50%; height: auto;" />
 <img src="./src/assets/cart.png" alt="cart" style="width: 50%; height: auto;" />
+<img src="./src/assets/searching_filtering.png" alt="cart" style="width: 50%; height: auto;" />
