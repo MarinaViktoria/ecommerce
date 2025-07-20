@@ -1,12 +1,40 @@
-# React + Vite
+## Ecommerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the project
 
-Currently, two official plugins are available:
+This React project (SPA) was created and completed as an assignment during a Full Stack Web Development Bootcamp at [ReDI School of Digital Integration] (https://www.redi-school.org/) in April 2025.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Stack
 
-## Expanding the ESLint configuration
+React, Vite, Tailwind
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Main learnings
+
+Fetching real data from an API → Using the Fake Store API
+Dynamic State Updates → Managing data and rendering updates
+
+Setting Up Routing with React Router
+(Installing react-router-dom)
+
+Fetching Product Data from an API
+(Using Fake Store API to load product data dynamically)
+
+Creating a Dynamic Product Page
+(Using React Router Params to load product details dynamically)
+
+Managing State for the Cart
+(Products added to the cart remain accessible throughout the app)
+
+Implement Global State Management with Context API
+(Defining a Cart Context that manages the cart items and provides functions to add or remove products)
+
+Implementing Error Handling in API Requests
+(Improving our fetch logic by handling API errors)
+
+Using an Error Boundary
+(React Error Boundaries allow to catch runtime errors and display a fallback UI instead of crashing the entire app)
+
+### images
+
+<img src="./assets/products.jpeg" alt="Celebration" style="width: 50%; height: auto;" />
+<img src="./assets/cart.jpeg" alt="Celebration" style="width: 50%; height: auto;" />
