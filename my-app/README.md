@@ -33,5 +33,5 @@ Using an Error Boundary
 
 ### images
 
-<img src="./assets/products.png" alt="products" style="width: 50%; height: auto;" />
-<img src="./assets/cart.png" alt="cart" style="width: 50%; height: auto;" />
+<img src="./src/assets/products.png" alt="products" style="width: 50%; height: auto;" />
+<img src="./src/assets/cart.png" alt="cart" style="width: 50%; height: auto;" />
