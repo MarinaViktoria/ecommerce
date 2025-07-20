@@ -26,7 +26,7 @@ export default function Products({ products, loading, isCartVisible }) {
       >
         {/* Welcome Section */}
         <section className="text-center mb-8">
-          <h2 className="text-2xl font-semibold text-blue-700">
+          <h2 className="text-2xl font-semibold text-sky-600">
             Welcome to Our Store!
           </h2>
 

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Header from "./Header";
 import MainPart from "./MainPart";
+import Home from "./Home";
 import { useState, useEffect } from "react";
 import Products from "./Products";
 import Cart from "./Cart";
@@ -47,7 +48,7 @@ function App() {
               <div className="flex justify-center w-full">
                 <button
                   onClick={toggleCart}
-                  className="mt-8 bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-700 transition-all duration-300 ease-in-out"
+                  className="mt-8 bg-sky-500 text-white py-1 px-2 rounded hover:bg-sky-600 transition-all duration-300 ease-in-out"
                 >
                   Close Cart
                 </button>
@@ -58,6 +59,16 @@ function App() {
           <Routes>
             <Route
               path="/"
+              element={
+                <Home
+                  products={products}
+                  loading={loading}
+                  isCartVisible={isCartVisible}
+                />
+              }
+            />
+            <Route
+              path="/topsellers"
               element={
                 <MainPart
                   products={products}
