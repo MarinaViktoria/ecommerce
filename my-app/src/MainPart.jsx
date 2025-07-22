@@ -1,16 +1,10 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 import { useCart } from "./context/useCart";
-//import { useParams } from "react-router-dom";
 
 function MainPart({ products, loading, isCartVisible }) {
   const { addToCart } = useCart();
   const [searchInput, setSearchInput] = useState("");
-  //const { id } = useParams();
-
-  //if (!products....) wäre noch zu früh, da products noch eine [] ist...
-  //deshalb Fehlermeldung
-  //lösen mit dem loading vorher
 
   if (loading) {
     return <p className="text-center mt-10">Loading products...</p>;
